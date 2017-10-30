@@ -118,13 +118,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
+      "ekoodi",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "app",
+      "ekoodi",
       "kebab-case"
     ],
     "use-input-property-decorator": true,

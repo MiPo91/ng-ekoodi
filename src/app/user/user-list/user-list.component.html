@@ -1,0 +1,7 @@
+<p class="ekoodi-user-list-title">
+  {{title}}
+</p>
+
+<div *ngFor="let user of users" (click)="onUserSelect(user)">
+  <ekoodi-user-info [user]="user"></ekoodi-user-info>
+</div>
