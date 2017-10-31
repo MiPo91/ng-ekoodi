@@ -18,4 +18,8 @@ export class UserService {
     return this.users;
   }
 
+  addUser(user: User) {
+    this.users.push(Object.assign({}, user));
+  }
+
 }

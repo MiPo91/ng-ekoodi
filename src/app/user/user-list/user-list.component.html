@@ -7,4 +7,14 @@
   <div *ngFor="let user of users" (click)="onUserSelect(user)">
     <ekoodi-user-info [user]="user"></ekoodi-user-info>
   </div>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="First Name" [(ngModel)]="user.firstName">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Last Name" [(ngModel)]="user.lastName">
+  </mat-form-field>
+
+  <button (click)="onSubmitNewUser()">Add</button>
 </mat-list>
