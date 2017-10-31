@@ -7,6 +7,7 @@ import {UserListComponent} from './user/user-list/user-list.component';
 import {UserInfoComponent} from './user/user-info/user-info.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatIconModule, MatInputModule, MatListModule} from '@angular/material';
+import {UserService} from './user/user.service';
 
 
 @NgModule({
@@ -24,7 +25,9 @@ import {MatButtonModule, MatIconModule, MatInputModule, MatListModule} from '@an
     MatIconModule,
     MatListModule
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,5 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {User} from '../user';
+import {UserService} from '../user.service';
 
 @Component({
   selector: 'ekoodi-user-list',
@@ -12,18 +13,14 @@ export class UserListComponent implements OnInit {
   users: User[];
   @Output() userSelected: EventEmitter<User>;
 
-  constructor() {
+  constructor(private userService: UserService) {
     this.title = 'User List';
     this.users = [];
     this.userSelected = new EventEmitter();
   }
 
   ngOnInit() {
-    this.users = [
-      new User('Joku', 'Jostain'),
-      new User('Joku', 'Muu'),
-      new User('Joku', 'Kolmas')
-    ];
+    this.users = this.userService.getUsers();
   }
 
   onUserSelect(user: User) {
