@@ -31,8 +31,9 @@ export class UserListComponent implements OnInit {
   }
 
   onSubmitNewUser() {
-    if (this.user.firstName.length > 0 && this.user.lastName.length > 0) {
-      this.userService.addUser(this.user);
+    if (typeof this.user.firstName !== 'undefined' && typeof this.user.lastName !== 'undefined' &&
+      this.user.firstName.length > 0 && this.user.lastName.length > 0) {
+        this.userService.addUser(this.user);
     }
   }
 
